@@ -1,0 +1,34 @@
+{
+  "name": "santinho-ai-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev":            "next dev --turbopack",
+    "build":          "next build",
+    "start":          "next start",
+    "lint":           "next lint",
+    "embeddings":     "npx tsx scripts/generate-embeddings.ts",
+    "db:migrate":     "echo 'Rode as migrations manualmente no Supabase SQL Editor'"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@supabase/ssr":     "^0.5.2",
+    "@supabase/supabase-js": "^2.47.0",
+    "next":       "15.0.3",
+    "react":      "^19.0.0",
+    "react-dom":  "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node":      "^22",
+    "@types/react":     "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer":     "^10.4.20",
+    "dotenv":           "^16.4.5",
+    "eslint":           "^9",
+    "eslint-config-next": "15.0.3",
+    "postcss":     "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "tsx":         "^4.19.0",
+    "typescript":  "^5"
+  }
+}
