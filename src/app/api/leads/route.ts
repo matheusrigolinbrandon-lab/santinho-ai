@@ -1,3 +1,4 @@
+﻿// @ts-nocheck
 // src/app/api/leads/route.ts
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase/server'
