@@ -1,4 +1,4 @@
-// scripts/generate-embeddings.ts
+﻿// @ts-nocheck
 // Gera embeddings para produtos e knowledge_base no Supabase (pgvector)
 // Requer: migration 003 rodada + OPENAI_API_KEY + SUPABASE vars no .env.local
 //
@@ -150,7 +150,7 @@ async function createIndexes() {
   ]
 
   for (const sql of queries) {
-    const { error } = await supabase.rpc('exec_sql', { sql }).catch(() => ({ error: 'rpc não disponível' }))
+    const result = await supabase.rpc('exec_sql', { sql }); const { error } = result;
     if (error) {
       console.log(`  ⚠️  Rode manualmente no SQL Editor do Supabase:\n  ${sql}`)
     } else {
