@@ -28,7 +28,7 @@ function classify(msg: string): string | null {
 
 interface Msg { role: 'bot' | 'user' | 'sys'; text: string }
 
-export default function SantinhoWidget() {
+export default function SantinhoWidget({ standalone = false }: { standalone?: boolean }) {
   const [open, setOpen]       = useState(false)
   const [msgs, setMsgs]       = useState<Msg[]>([])
   const [input, setInput]     = useState('')
