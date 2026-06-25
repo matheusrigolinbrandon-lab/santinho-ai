@@ -1,23 +1,14 @@
-'use client'
+import type { Metadata } from 'next'
 import './globals.css'
 import Sidebar from '@/components/shared/Sidebar'
 import SantinhoWidget from '@/components/shared/SantinhoWidget'
-import { usePathname } from 'next/navigation'
+
+export const metadata: Metadata = {
+  title: 'Santinho AI — Fundição Tropical',
+  description: 'Painel de atendimento inteligente · Fundição Tropical · Maringá/PR',
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
-  const isChat = pathname === '/chat'
-
-  if (isChat) {
-    return (
-      <html lang="pt-BR">
-        <body style={{ margin: 0, padding: 0, background: '#0a0a0a' }}>
-          {children}
-        </body>
-      </html>
-    )
-  }
-
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
